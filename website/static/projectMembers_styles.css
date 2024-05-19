@@ -1,0 +1,24 @@
+.container {
+  display: flex; /* Use flexbox for side-by-side layout */
+  justify-content: space-between; /* Distribute boxes evenly with space */
+  width: 76%; /* Adjust container width as needed */
+  margin: auto; /* Center container horizontally */
+  place-items: center;
+}
+
+.blurred-box {
+  background: rgba(0, 0, 0, 0.5); /* Background color and opacity */
+  backdrop-filter: blur(5px); /* Blur effect */
+  border-radius: 10px; /* Rounded corners */
+  text-align: justify;
+  padding: 20px;
+  width: 345px; /* Adjust individual box width */
+  height: 450px;
+  color: white;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.blurred-box::-webkit-scrollbar {
+  display: none;
+}

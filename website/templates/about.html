@@ -1,0 +1,81 @@
+{% extends "base.html" %} {% block title %}About{% endblock %} {% block content
+%}
+<head>
+  {% block custom_styles %}
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static', filename='about_styles.css') }}"
+  />
+  {% endblock %}
+</head>
+<div class="blurred-box">
+  <h1>Document-Based Question Answering</h1>
+  <p>
+    Document Question Answering, also referred to as Document Visual Question
+    Answering, is a task that involves providing answers to questions posed
+    about document images. The input to models supporting this task is typically
+    a combination of an image and a question, and the output is an answer
+    expressed in natural language. These models utilize multiple modalities,
+    including text, the positions of words (bounding boxes), and the image
+    itself.
+  </p>
+
+  <h2>1. DistillBERT</h2>
+  <p>
+    DistillBERT is a smaller, lighter-weight version of the pre-trained language
+    model BERT (Bidirectional Encoder Representations from Transformers). BERT
+    excels at understanding the relationships between words in a sentence.
+    DistillBERT, while smaller, inherits this capability from its parent model,
+    making it suitable for various natural language processing tasks, including
+    question answering.
+  </p>
+
+  <h2>2. LangChain</h2>
+  <p>
+    LangChain is a Python library specifically designed for building natural
+    language processing workflows. It provides tools for data loading,
+    pre-processing, model integration, and evaluation. In our case, LangChain
+    will help us handle document processing, question analysis, and integrating
+    DistillBERT for answering questions.
+  </p>
+
+  <h2>3. Hugging Face Embeddings</h2>
+  <p>
+    Hugging Face is a popular platform for accessing and using pre-trained
+    transformer models. It offers various pre-trained models, including
+    DistillBERT. LangChain can leverage Hugging Face to load the DistillBERT
+    model and use it for generating text embeddings. Text embeddings are
+    numerical representations that capture the meaning of a text passage. By
+    comparing the embeddings of questions and document passages, LangChain can
+    identify the most relevant document sections for answering the question.
+  </p>
+
+  <h2>Putting it all Together</h2>
+  <p>Here's a simplified overview of how the system works:</p>
+  <ol>
+    <li>
+      <strong>Load Documents:</strong> The documents you want the system to
+      answer questions about are loaded and pre-processed using LangChain.
+    </li>
+    <li>
+      <strong>Process Questions:</strong> User questions are also pre-processed
+      using LangChain to extract key information.
+    </li>
+    <li>
+      <strong>Generate Embeddings:</strong> LangChain utilizes Hugging Face to
+      load the DistillBERT model and generate embeddings for both the documents
+      and the questions.
+    </li>
+    <li>
+      <strong>Answer Retrieval:</strong> By comparing the question embeddings
+      with document embeddings, LangChain identifies the document sections most
+      relevant to the question.
+    </li>
+    <li>
+      <strong>Answer Extraction:</strong> Based on the retrieved document
+      sections, LangChain extracts the answer text and presents it to the user.
+    </li>
+  </ol>
+</div>
+{% endblock %}

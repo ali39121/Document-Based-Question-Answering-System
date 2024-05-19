@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='base_styles.css') }}"
+    />
+    {% block custom_styles %} {% endblock %}
+    <!---Bootstrap Links-->
+    <meta name="viewport" content="width=device-width, intial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
+    <!---Bootstrap Links Ended-->
+  </head>
+
+  <body>
+    <!--Nav Bar-->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="/">Document Based QA</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" id="about" href="/about">
+              About Project <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="fileBasedQa" href="/file-based-qa"
+              >File Based QA</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="projectMembers" href="/project-members"
+              >Project Members</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--Nav Bar Ended-->
+
+    <div class="container">{% block content %}{% endblock %}</div>
+
+    <!---Footer Started--->
+    <footer
+      class="footer footer-dark"
+      id="footer"
+      style="
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(5px);
+        padding: 10px 20px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+        color: #fff;
+      "
+    >
+      <div class="container text-center">
+        <small
+          >Developed By <strong>Mohammad Ali</strong> &
+          <strong>Fariya Bilal</strong></small
+        >
+      </div>
+    </footer>
+    <!---Footer Ended--->
+  </body>
+</html>

@@ -1,0 +1,26 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content%}
+<head>
+  {% block custom_styles %}
+  <!--Google Cursive Font-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap"
+    rel="stylesheet"
+  />
+  <!--Google Cursive Font End-->
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static', filename='home_styles.css') }}"
+  />
+  {% endblock %}
+</head>
+
+<body>
+  <div class="blurred-box">
+    <p class="text">WELCOME</p>
+  </div>
+</body>
+{% endblock %}
