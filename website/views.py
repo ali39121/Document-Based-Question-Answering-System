@@ -14,6 +14,6 @@ def about():
 def fileBasedQa():
     return render_template("fileBasedQa.html")
 
-@views.route('/project-members')
-def projectMembers():
-    return render_template("projectMembers.html")
+@views.route('/team')
+def team():
+    return render_template("team.html")

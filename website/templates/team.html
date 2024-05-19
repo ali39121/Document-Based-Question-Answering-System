@@ -1,0 +1,108 @@
+{% extends "base.html" %} {% block title %}Team{% endblock %} {% block content
+%}
+<head>
+  <title>Team</title>
+  {% block custom_styles %}
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static', filename='teams_styles.css') }}"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  />
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
+  {% endblock %}
+</head>
+<body>
+  <!--  <section>
+    <div class="row">
+      <h1>Our Team</h1>
+    </div>
+    <div class="row">
+      <div class="column">
+        <div class="card">
+          <div class="image-container">
+            <img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/16620/production/_91408619_55df76d5-2245-41c1-8031-07a4da3f313f.jpg" />
+          </div>
+          <h3>Mohammad Ali</h3>
+          <p>Backend/UI/Report</p>
+          <div class="icons">
+            <a href:"#">
+              <i class="fab fa-linkedin-square"></i>
+            </a>
+            <a href:"#">
+              <i class="fab fa-github-square" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="card">
+          <div class="image-container">
+            <img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/16620/production/_91408619_55df76d5-2245-41c1-8031-07a4da3f313f.jpg" />
+          </div>
+          <h3>Fariya Bilal</h3>
+          <p>UI/Report/Video</p>
+          <div class="icons">
+            <a href:"#">
+              <i class="fab fa-linkedin-square"></i>
+            </a>
+            <a href:"#">
+              <i class="fab fa-github-square" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>-->
+  <section class="team">
+    <div class="center">
+      <h1>Our Team</h1>
+    </div>
+
+    <div class="team-content">
+      <!--Team Member 1-->
+      <div class="box">
+        <img
+          src="{{ url_for('static', filename='/media/profile-img-1.jpg') }}"
+        />
+        <h3>Mohammad Ali</h3>
+        <h5>UI/Backend/Report</h5>
+        <div class="icons">
+          <a href="https://www.linkedin.com/in/mohammad-ali-b80622221">
+            <i class="ri-linkedin-fill"></i>
+          </a>
+          <a href="https://github.com/ali39121">
+            <i class="ri-github-fill"></i>
+          </a>
+        </div>
+      </div>
+
+      <!--Team Member 2-->
+      <div class="box">
+        <img
+          src="{{ url_for('static', filename='/media/profile-img-2.jpg') }}"
+        />
+        <h3>Fariya Bilal</h3>
+        <h5>UI/Video/Report</h5>
+        <div class="icons">
+          <a
+            href="https://www.linkedin.com/in/fariya-bilal-248643202?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+          >
+            <i class="ri-linkedin-fill"></i>
+          </a>
+          <a href="https://github.com/faeWorld">
+            <i class="ri-github-fill"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+{% endblock %}
