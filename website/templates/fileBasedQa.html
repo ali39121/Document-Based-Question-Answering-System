@@ -1,4 +1,33 @@
 {% extends "base.html" %} {% block title %}fileBasedQa{% endblock %} {% block
 content %}
-<header><title>File Based QA</title></header>
+<head>
+  <title>File Based QA</title>
+  {% block custom_styles %}
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static', filename='fileBasedQa_styles.css') }}"
+  />
+  {% endblock %}
+</head>
+<body>
+  <!--Animation & Styling-->
+  <div class="divToCenterDisplay">
+    <div class="box">
+      <span class="borderLine"></span>
+      <span class="borderLine2"></span>
+      <!--Text Box & Submit Button-->
+      <div class="container">
+        <form>
+          <div class="entryArea">
+            <input type="text" required />
+            <div class="labelLine">Enter Query</div>
+          </div>
+        </form>
+      </div>
+      <!--Text Box & Submit Button End-->
+    </div>
+  </div>
+  <!--Animation & Styling End-->
+</body>
 {% endblock %}

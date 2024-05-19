@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template,request
 
 views = Blueprint('views', __name__)
 
@@ -12,7 +12,7 @@ def about():
 
 @views.route('/file-based-qa')
 def fileBasedQa():
-    return render_template("fileBasedQa.html", text="Testings")
+    return render_template("fileBasedQa.html")
 
 @views.route('/project-members')
 def projectMembers():

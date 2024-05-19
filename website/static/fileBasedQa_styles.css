@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+/*******************Overwriting base_styles.css and centering body in a container *******************/
+.divToCenterDisplay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 85vh;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/*******************Overwriting base_styles.css End *******************/
+
+/*******************Text Box Start*******************/
+
+.container {
+  width: inherit;
+}
+
+.entryArea {
+  position: relative;
+  height: 80px;
+  line-height: 80px;
+}
+input {
+  position: absolute;
+  width: 100%;
+  outline: none;
+  font-size: 1.3em;
+  padding: 0 30px;
+  line-height: 80px;
+  border-radius: 10px;
+  border: 2px solid #f0ffff;
+  background: transparent;
+  transition: 0.1s ease;
+  z-index: 1111;
+}
+.labelLine {
+  position: absolute;
+  font-size: 1.6em;
+  color: #f0ffff;
+  background: #251124;
+  padding: 0 25px;
+  margin: 0 20px;
+  transition: 0.2s ease;
+}
+input:focus,
+input:valid {
+  color: #fff;
+  border: 4px solid #fff;
+}
+input:focus + .labelLine,
+input:valid + .labelLine {
+  color: #fff;
+  height: 30px;
+  line-height: 30px;
+  transform: translate(-15px, -16px) scale(0.88);
+  z-index: 1111;
+}
+/*******************Text Box End*******************/
+
+/*******************Styling Start*******************/
+.box {
+  position: relative;
+  width: 600px;
+  height: 200px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.box form {
+  position: absolute;
+  inset: 4px;
+  background: #251124;
+  padding: 50px 40px;
+  border-radius: 8px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+.inputBox {
+  color: #fff;
+}
+.box::before {
+  content: "";
+  position: absolute;
+  top: +5%;
+  left: -50%;
+  width: 600px;
+  height: 90px;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent,
+    #45f3ff,
+    #45f3ff,
+    #45f3ff
+  );
+  transform-origin: bottom right;
+  z-index: 1;
+  animation: animate 6s linear infinite;
+}
+.box::after {
+  content: "";
+  position: absolute;
+  top: +5%;
+  left: -50%;
+  width: 600px;
+  height: 90px;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent,
+    #45f3ff,
+    #45f3ff,
+    #45f3ff
+  );
+  transform-origin: bottom right;
+  z-index: 1;
+  animation: animate 6s linear infinite;
+  animation-delay: -3s;
+}
+.borderLine {
+  position: absolute;
+  top: 0;
+  inset: 0;
+}
+.borderLine::before {
+  content: "";
+  position: absolute;
+  top: +5%;
+  left: -50%;
+  width: 600px;
+  height: 90px;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent,
+    #ff2770,
+    #ff2770,
+    #ff2770
+  );
+  transform-origin: bottom right;
+  z-index: 1;
+  animation: animate 6s linear infinite;
+  animation-delay: -2s;
+}
+.borderLine::after {
+  content: "";
+  position: absolute;
+  top: +5%;
+  left: -50%;
+  width: 600px;
+  height: 90px;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent,
+    #ff2770,
+    #ff2770,
+    #ff2770
+  );
+  transform-origin: bottom right;
+  z-index: 1;
+  animation: animate 6s linear infinite;
+  animation-delay: -5s;
+}
+.borderLine2 {
+  position: absolute;
+  top: 0;
+  inset: 0;
+}
+.borderLine2::before {
+  content: "";
+  position: absolute;
+  top: +5%;
+  left: -50%;
+  width: 600px;
+  height: 90px;
+  background: linear-gradient(0deg, transparent, transparent, #fff, #fff, #fff);
+  transform-origin: bottom right;
+  z-index: 1;
+  animation: animate 6s linear infinite;
+  animation-delay: -1s;
+}
+.borderLine2::after {
+  content: "";
+  position: absolute;
+  top: +5%;
+  left: -50%;
+  width: 600px;
+  height: 90px;
+  background: linear-gradient(0deg, transparent, transparent, #fff, #fff, #fff);
+  transform-origin: bottom right;
+  z-index: 1;
+  animation: animate 6s linear infinite;
+  animation-delay: -4s;
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/*******************Styling End*******************/
