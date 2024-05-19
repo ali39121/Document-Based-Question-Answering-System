@@ -1,0 +1,74 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ask Me Anything</title>
+    <!-- Add any additional CSS or stylesheets here -->
+
+
+<body>
+
+
+<nav>
+    <a href="#home">Home</a>
+   
+    <a href="#services">Services</a>
+
+    <a href="#about">About</a>
+    
+  </nav>
+</head>
+
+<body>
+
+    <section id="home"></section>
+    <header>
+        <h1>Ask Me Anything...</h1>
+        <h2>Document Question Answering</h2>
+      
+    </header>
+</section>
+
+<section id="services">
+
+    <div class="container">
+        <h3>You can begin document visualizing Q/A here!</h3>
+
+        <input type="file" id="fileInput" class="inputfile"/>
+        <img id="imagePreview" style="display: none;" />
+
+        <div class="centered-element">
+           <form>
+             <textarea id="questionInput" placeholder="My question is..."></textarea>
+             <br>
+             <button onclick="submitQuestion()">Submit</button>
+           </form>   
+           <div id="result"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</section>
+
+    <main>
+        <section id="about">
+            <h3>What's it about?</h3>
+            <p>This is a Document Visual Question Answering, where we take Documnet Images. And generate questions and answers on the basis of that particular document.</p>
+            <p>This technology offers significant potential for various applications, including intelligent document search, legal research, and scientific literature exploration</p>
+        <p>Feedback here!<a href="mailto:01-134211-020@bahria.student.edu.pk.com,01-134211-043@bahria.student.edu.pk.com">Our Email</a> </p>
+
+        </section>
+
+ 
+
+    </main>
+
+    <footer>
+        <p>&copy; NLP Project Collaboration of Fariya and Ali </p>
+        
+    </footer>
+</body>
+</html>
